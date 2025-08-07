@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
+    
     <form action="/postComplain" method="post">
-      <label for="sobject">תחום התלונה:</label>
+      <label for="sobject">Select Category</label>
       <select name="sobject" id="sobject" required>
-        <option value="">בחר תחום...</option>
+        <option value="">Select category...</option>
         <option value="Food">Food</option>
         <option value="Equipment">Equipment</option>
         <option value="Orders">Orders</option>
@@ -20,7 +22,7 @@
       <textarea
         name="complain"
         id="message"
-        placeholder="תאר את הבעיה בפירוט..."
+        placeholder="Describe the issue in detail..."
         required
         maxlength="1000"
       ></textarea>

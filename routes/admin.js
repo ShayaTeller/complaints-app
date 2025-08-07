@@ -3,7 +3,7 @@ import validateUser from '../middlware/middlware.js'
 
 const router = express.Router()
 
-router.get('/',validateUser,(req,res)=>{
+router.post('/',validateUser,(req,res)=>{
 
 })
 

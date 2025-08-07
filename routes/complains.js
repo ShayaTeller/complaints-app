@@ -1,12 +1,11 @@
-import express from 'express'
+import express from "express";
+import { sendAComplain } from "../models/complaint.model.js";
+const complainRouter = express.Router();
 
-const complainRouter = express.Router()
+complainRouter.post("/postComplain", async (req, res) => {
+  const result = await sendAComplain(req,res);
+  console.log(result)
+  res.json(await result)
+});
 
-complainRouter.post('/postComplain',(req,res)=>{
-    const sobject = req.body.sobject;
-    const complain = req.body.complain;
-    console.log(`sobject: ${sobject}\ncomplain: ${complain}`)
-    res.send('thank you!')
-})
-
-export default complainRouter
+export default complainRouter;

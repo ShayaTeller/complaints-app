@@ -5,14 +5,21 @@ import complainRouter from './routes/complains.js'
 import mongoclientdb from './db/connect.js'
 
 config()
-mongoclientdb
+await mongoclientdb
 const server = express()
 server.use(express.urlencoded({ extended: true }));
 server.use(express.json())
 
-server.use('/',complainRouter)
-server.use('/',express.static('public'))
+server.use((req,res,next)=>{
+    console.log(req.method,req.url)
+    next();
 
+})
+server.use('/',router)
+
+server.use('/',complainRouter)
+
+server.use('/',express.static('public'))
 
 export default router
 server.listen(process.env.PORT,()=>{

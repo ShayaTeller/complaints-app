@@ -1,3 +1,15 @@
-body{
-    background-color: aqua;
+.page-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6; /* מרווח בין שורות נוח לקריאה */
+  color: #333;
+  background-color: #ffffff; /* רקע לבן כמו דף רגיל */
+  min-height: 100vh; /* גובה מינימלי של כל המסך */
 }
